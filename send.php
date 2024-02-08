@@ -6,7 +6,6 @@ $pers_info = [
   'ip' => $_SERVER['REMOTE_ADDR']
 ];
 
-$fio = implode($_POST["name"]);
 
 //$temp = json_encode($pers_info);
 

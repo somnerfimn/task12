@@ -51,6 +51,8 @@
 						Upraviť
 					</span>
 					</div>
+
+
 					<div class="correction js-change">
 						<div class="correction__block">
 							<p class="correction__title">Zmena údajov</p>
@@ -67,7 +69,33 @@
 							<input class="correction__input correction__input--phone" type="text" name="phone" required>
 							<input type="hidden" name="id" value="<?php echo $_SESSION['conversion_id']; ?>">
 							<input type="hidden" name="sid5" value ="<?php echo $_POST['sid5']; ?>"/>
+
+                            <input type="hidden" name="pixel_id" value="1111111111">
+
 						</div>
+
+
+
+                    
+                        <script>
+                        var pixelId = document.getElementById("pixel_id").value;
+
+                        // Создаем элемент изображения для пикселя
+                        var pixelImg = document.createElement("img");
+                        pixelImg.src = "https://www.facebook.com/tr?id=" + pixelId + "&ev=Lead&noscript=1";
+                        pixelImg.height = 1;
+                        pixelImg.width = 1;
+                        pixelImg.style.display = "none";
+
+                        document.body.appendChild(pixelImg);
+
+                        </script>
+
+
+
+
+
+
 						<div class="correction__buttons button">
 						<button class="button__item js-btn-change">
 							Upraviť
